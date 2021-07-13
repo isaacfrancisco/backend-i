@@ -1,0 +1,18 @@
+{
+  "name": "backend-i",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/isaacfrancisco/backend-i.git",
+  "author": "Isaac Francisco <isaac-silvajf@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.12",
+    "sequelize": "^6.6.5",
+    "sequelize-cli": "^6.2.0"
+  }
+}
