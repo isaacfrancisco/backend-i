@@ -2,7 +2,6 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-
     await queryInterface.createTable('collaborators', {
       id: {
         type: Sequelize.INTEGER,
@@ -20,7 +19,7 @@ module.exports = {
         unique: true,
       },
       registration: {
-        type: Sequelize.BIGINT(12),
+        type: Sequelize.BIGINT(16),
         allowNull: false,
       },
       created_at: {
@@ -32,12 +31,9 @@ module.exports = {
         allowNull: false,
       }
     });
-
   },
 
   down: async (queryInterface, Sequelize) => {
-
     await queryInterface.dropTable('collaborators');
-
   }
 };
