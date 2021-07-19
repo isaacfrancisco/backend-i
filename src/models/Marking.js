@@ -3,7 +3,7 @@ const { Model, DataTypes } = require('sequelize');
 class Marking extends Model {
     static init(sequelize) {
         super.init({
-            sequential_record: DataTypes.TEXT,
+            sequential_record: DataTypes.STRING(9),
             marking_type: DataTypes.TEXT,
             collaborator: DataTypes.STRING,
             marking_date: DataTypes.DATEONLY,

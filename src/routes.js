@@ -12,7 +12,5 @@ router.delete('/collaborators/:collaborator_id', CollaboratorController.delete);
 
 router.get('/markings', MarkingController.index);
 router.post('/markings', MarkingController.store);
-router.put('/markings/:marking_id', MarkingController.update);
-router.delete('/markings/:marking_id', MarkingController.delete);
 
 module.exports = router;

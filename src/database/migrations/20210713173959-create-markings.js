@@ -10,8 +10,9 @@ module.exports = {
         allowNull: false,
       },
       sequential_record: {
-        type: Sequelize.TEXT,
+        type: Sequelize.STRING(9),
         allowNull: false,
+        unique: true,
       },
       marking_type: {
         type: Sequelize.TEXT,
