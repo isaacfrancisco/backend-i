@@ -13,24 +13,9 @@ module.exports = {
     },
 
     async store(req, res) {
+        const { selectedFile } = req.body;
         try {
-            const {
-                sequential_record,
-                marking_type,
-                collaborator,
-                marking_date,
-                marking_hour,
-                completed_marking
-            } = req.body;
-
-            const marking = await Marking.create({
-                sequential_record,
-                marking_type,
-                collaborator,
-                marking_date,
-                marking_hour,
-                completed_marking
-            });
+            const marking = await Marking.bulkCreate(selectedFile);
 
             return res.status(200).send({ marking });
         } catch (error) {

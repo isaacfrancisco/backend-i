@@ -21,7 +21,11 @@ module.exports = {
             return res.status(200).send({ collaborator });
         } catch (error) {
             console.log(error);
-            return res.status(400).send({ error: "Error creating new collaborator" });
+            if (error.parent.code === 'ER_DUP_ENTRY') {
+                return res.status(400).send({ error: "pis already registered" });
+            } else {
+                return res.status(400).send({ error: "Error creating new collaborator" });
+            }
         }
     },
 
@@ -40,7 +44,11 @@ module.exports = {
             return res.status(200).send({ message: "collaborator edited successfully!" });
         } catch (error) {
             console.log(error);
-            return res.status(400).send({ error: "Error update collaborator" });
+            if (error.parent.code === 'ER_DUP_ENTRY') {
+                return res.status(400).send({ error: "pis already registered" });
+            } else {
+                return res.status(400).send({ error: "Error update collaborator" });
+            }
         }
     },
 

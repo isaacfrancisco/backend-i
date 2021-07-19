@@ -14,12 +14,12 @@ module.exports = {
         allowNull: false,
       },
       pis: {
-        type: Sequelize.BIGINT(12),
+        type: Sequelize.STRING(12),
         allowNull: false,
         unique: true,
       },
       registration: {
-        type: Sequelize.BIGINT(16),
+        type: Sequelize.TEXT,
         allowNull: false,
       },
       created_at: {

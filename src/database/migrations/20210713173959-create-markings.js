@@ -10,7 +10,7 @@ module.exports = {
         allowNull: false,
       },
       sequential_record: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.TEXT,
         allowNull: false,
       },
       marking_type: {
@@ -22,11 +22,11 @@ module.exports = {
         allowNull: false,
       },
       marking_date: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.DATEONLY,
         allowNull: false,
       },
       marking_hour: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.TIME,
         allowNull: false,
       },
       completed_marking: {
